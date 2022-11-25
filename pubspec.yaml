@@ -1,11 +1,10 @@
-name: rich_editor
-description: WYSIWYG editor for Flutter with a rich set of supported formatting options.
-version: 0.0.5
-homepage: https://github.com/JideGuru/rich_editor
+name: rich_editor_gg
+description: Flutter with a rich set of supported formatting options.
+version: 1.0.0
+homepage: https://github.com/JoseBarreto1/rich_editor
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
-  flutter: ">=1.17.0"
+  sdk: ">=2.18.0 <3.0.0"
 
 dependencies:
   flutter:

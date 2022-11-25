@@ -1,11 +1,11 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:rich_editor/src/models/alias.dart';
-import 'package:rich_editor/src/models/config.dart';
-import 'package:rich_editor/src/models/family.dart';
-import 'package:rich_editor/src/models/font.dart';
-import 'package:rich_editor/src/models/system_font.dart';
+import 'package:rich_editor_gg/src/models/alias.dart';
+import 'package:rich_editor_gg/src/models/config.dart';
+import 'package:rich_editor_gg/src/models/family.dart';
+import 'package:rich_editor_gg/src/models/font.dart';
+import 'package:rich_editor_gg/src/models/system_font.dart';
 import 'package:xml2json/xml2json.dart';
 
 /// A simple port of FontListParser from Java to Dart

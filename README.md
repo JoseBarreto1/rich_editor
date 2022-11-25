@@ -1,4 +1,4 @@
-# ✨ rich_editor
+# ✨ rich_editor_gg
 
 [![pub package](https://img.shields.io/pub/v/rich_editor.svg)](https://pub.dartlang.org/packages/rich_editor)
 [![pub points](https://badges.bar/rich_editor/pub%20points)](https://pub.dev/packages/rich_editor/score)

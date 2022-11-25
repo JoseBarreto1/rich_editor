@@ -1,4 +1,4 @@
-import 'package:rich_editor/src/models/alias.dart';
+import 'package:rich_editor_gg/src/models/alias.dart';
 
 import 'family.dart';
 

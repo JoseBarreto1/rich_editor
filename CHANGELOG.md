@@ -1,3 +1,6 @@
+## 1.0.0
+* Melhorias e correções de bugs
+
 ## 0.0.1
 
 * Initial release with basic features

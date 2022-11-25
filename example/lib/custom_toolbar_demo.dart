@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:rich_editor/rich_editor.dart';
+import 'package:rich_editor_gg/rich_editor.dart';
 
 class CustomToolbarDemo extends StatefulWidget {
   @override

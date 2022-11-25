@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
-import 'package:rich_editor/src/extensions/extensions.dart';
-import 'package:rich_editor/src/models/callbacks/did_html_change_listener.dart';
-import 'package:rich_editor/src/models/callbacks/html_changed_listener.dart';
-import 'package:rich_editor/src/models/callbacks/loaded_listener.dart';
-import 'package:rich_editor/src/models/enum/command_name.dart';
+import 'package:rich_editor_gg/src/extensions/extensions.dart';
+import 'package:rich_editor_gg/src/models/callbacks/did_html_change_listener.dart';
+import 'package:rich_editor_gg/src/models/callbacks/html_changed_listener.dart';
+import 'package:rich_editor_gg/src/models/callbacks/loaded_listener.dart';
+import 'package:rich_editor_gg/src/models/enum/command_name.dart';
 
 import '../models/command_state.dart';
 

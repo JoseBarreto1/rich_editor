@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:path/path.dart';
-import 'package:rich_editor/src/models/system_font.dart';
-import 'package:rich_editor/src/utils/font_list_parser.dart';
+import 'package:rich_editor_gg/src/models/system_font.dart';
+import 'package:rich_editor_gg/src/utils/font_list_parser.dart';
 
 import 'html_text.dart';
 

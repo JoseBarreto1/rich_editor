@@ -2,12 +2,12 @@ import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:rich_editor/src/utils/javascript_executor_base.dart';
-import 'package:rich_editor/src/widgets/check_dialog.dart';
-import 'package:rich_editor/src/widgets/fonts_dialog.dart';
-import 'package:rich_editor/src/widgets/insert_image_dialog.dart';
-import 'package:rich_editor/src/widgets/insert_link_dialog.dart';
-import 'package:rich_editor/src/widgets/tab_button.dart';
+import 'package:rich_editor_gg/src/utils/javascript_executor_base.dart';
+import 'package:rich_editor_gg/src/widgets/check_dialog.dart';
+import 'package:rich_editor_gg/src/widgets/fonts_dialog.dart';
+import 'package:rich_editor_gg/src/widgets/insert_image_dialog.dart';
+import 'package:rich_editor_gg/src/widgets/insert_link_dialog.dart';
+import 'package:rich_editor_gg/src/widgets/tab_button.dart';
 
 import 'color_picker_dialog.dart';
 import 'font_size_dialog.dart';
