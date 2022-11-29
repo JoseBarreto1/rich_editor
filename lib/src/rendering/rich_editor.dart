@@ -179,15 +179,19 @@ class RichEditorState extends State<RichEditor> {
   /// Get current HTML from editor
   Future<String?> getHtml() async {
     try {
-      htmlLocal = await javascriptExecutor.getCurrentHtml();
+      if(_controller != null) {
+        htmlLocal = await javascriptExecutor.getCurrentHtml();
+      }
     } catch (e) {}
     return htmlLocal;
   }
 
   /// Set your HTML to the editor
   setHtml(String html) async {
-    htmlLocal = html;
-    return await javascriptExecutor.setHtml(html);
+    if(_controller != null) {
+      return await javascriptExecutor.setHtml(html);
+    }
+    htmlLocal = html;    
   }
 
   /// Get current Controller
