@@ -1,3 +1,6 @@
+## 1.0.2
+* Verifica se a controller existe para pegar e inserir html.
+
 ## 1.0.1
 * Validando lib para testes unitários
 * fix: update null safety flags
