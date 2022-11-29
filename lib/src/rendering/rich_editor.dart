@@ -35,7 +35,7 @@ class RichEditorState extends State<RichEditor> {
   String assetPath = 'packages/rich_editor_gg/assets/editor/editor.html';
 
   int port = 5321;
-  String html = '';
+  String htmlLocal = '';
   LocalServer? localServer;
   JavascriptExecutorBase javascriptExecutor = JavascriptExecutorBase();
 
@@ -49,7 +49,7 @@ class RichEditorState extends State<RichEditor> {
 
   _initServer() async {
     localServer = LocalServer(port);
-    await localServer!.start(_handleRequest);
+    await localServer?.start(_handleRequest);
   }
 
   void _handleRequest(HttpRequest request) {
@@ -77,7 +77,7 @@ class RichEditorState extends State<RichEditor> {
 
   _loadHtmlFromAssets() async {
     final filePath = assetPath;
-    _controller!.loadUrl(
+    _controller?.loadUrl(
       urlRequest: URLRequest(
         url: Uri.tryParse('http://localhost:$port/$filePath'),
       ),
@@ -89,7 +89,7 @@ class RichEditorState extends State<RichEditor> {
     return Column(
       children: [
         Visibility(
-          visible: widget.editorOptions!.barPosition == BarPosition.TOP,
+          visible: widget.editorOptions?.barPosition == BarPosition.TOP,
           child: _buildToolBar(),
         ),
         Expanded(
@@ -115,7 +115,7 @@ class RichEditorState extends State<RichEditor> {
               }
             },
             onLoadStop: (controller, link) async {
-              if (link!.path != 'blank') {
+              if (link?.path != 'blank') {
                 javascriptExecutor.init(_controller!);
                 await _setInitialValues();
                 _addJSListener();
@@ -137,7 +137,7 @@ class RichEditorState extends State<RichEditor> {
           ),
         ),
         Visibility(
-          visible: widget.editorOptions!.barPosition == BarPosition.BOTTOM,
+          visible: widget.editorOptions?.barPosition == BarPosition.BOTTOM,
           child: _buildToolBar(),
         ),
       ],
@@ -158,7 +158,6 @@ class RichEditorState extends State<RichEditor> {
     if (widget.editorOptions?.padding != null)
       await javascriptExecutor.setPadding(widget.editorOptions!.padding!);
     if (widget.editorOptions?.backgroundColor != null){
-      print(widget.editorOptions?.backgroundColor);
       await javascriptExecutor.setBackgroundColor(widget.editorOptions!.backgroundColor!);
     }      
     if (widget.editorOptions?.baseTextColor != null)
@@ -170,7 +169,7 @@ class RichEditorState extends State<RichEditor> {
   }
 
   _addJSListener() async {
-    _controller!.addJavaScriptHandler(
+    _controller?.addJavaScriptHandler(
         handlerName: 'editor-state-changed-callback://',
         callback: (c) {
           print('Callback $c');
@@ -180,14 +179,20 @@ class RichEditorState extends State<RichEditor> {
   /// Get current HTML from editor
   Future<String?> getHtml() async {
     try {
-      html = await javascriptExecutor.getCurrentHtml();
+      htmlLocal = await javascriptExecutor.getCurrentHtml();
     } catch (e) {}
-    return html;
+    return htmlLocal;
   }
 
   /// Set your HTML to the editor
   setHtml(String html) async {
+    htmlLocal = html;
     return await javascriptExecutor.setHtml(html);
+  }
+
+  /// Get current Controller
+  InAppWebViewController? getController(){
+    return _controller;
   }
 
   /// Hide the keyboard using JavaScript since it's being opened in a WebView
@@ -227,8 +232,8 @@ class RichEditorState extends State<RichEditor> {
   /// if html is equal to html RichTextEditor sets by default at start
   /// (<p>​</p>) so that RichTextEditor can be considered as 'empty'.
   Future<bool> isEmpty() async {
-    html = await javascriptExecutor.getCurrentHtml();
-    return html == '<p>​</p>';
+    htmlLocal = await javascriptExecutor.getCurrentHtml();
+    return htmlLocal == '<p>​</p>';
   }
 
   /// Enable Editing (If editing is disabled)
