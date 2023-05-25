@@ -29,7 +29,7 @@ class LocalServer {
     }
 
     var completer = new Completer();
-    runZoned(() {
+    runZonedGuarded(() {
       HttpServer.bind('localhost', port, shared: true).then((server) {
         this.server = server;
 
@@ -65,7 +65,7 @@ class LocalServer {
         });
         completer.complete();
       });
-    }, onError: (e, stackTrace) => print('Error: $e $stackTrace'));
+    }, (e, stackTrace) => print('Error: $e $stackTrace'));
     return completer.future;
   }
 }
@@ -91,7 +91,7 @@ class WebSocketServer {
       throw Exception('Server already started on http://localhost:$port');
     }
     var completer = new Completer();
-    runZoned(() {
+    runZonedGuarded(() {
       HttpServer.bind('localhost', port, shared: true).then(
           (HttpServer server) {
         print('[+]WebSocket listening at -- ws://localhost:$port/');
@@ -117,7 +117,7 @@ class WebSocketServer {
         }, onError: (err) => print('[!]Error -- ${err.toString()}'));
         completer.complete();
       }, onError: (err) => print('[!]Error -- ${err.toString()}'));
-    }, onError: (err) => print('[!]Error -- ${err.toString()}'));
+    }, (err, _) => print('[!]Error -- ${err.toString()}'));
 
     return completer.future;
   }
