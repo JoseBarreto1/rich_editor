@@ -1,3 +1,6 @@
+## 1.0.3
+* Suporte Flutter 3.10
+
 ## 1.0.2
 * Verifica se a controller existe para pegar e inserir html.
 
