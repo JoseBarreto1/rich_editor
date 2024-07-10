@@ -77,7 +77,7 @@ class _CustomToolbarDemoState extends State<CustomToolbarDemo> {
           Expanded(
             child: RichEditor(
               key: keyEditor,
-//         value: '', // initial HTML data
+              // value: '', // initial HTML data
               editorOptions: RichEditorOptions(
                 placeholder: 'Start typing',
                 // backgroundColor: Colors.blueGrey, // Editor's bg color
@@ -93,7 +93,6 @@ class _CustomToolbarDemoState extends State<CustomToolbarDemo> {
               // You can return a Link (maybe you need to upload the image to your
               // storage before displaying in the editor or you can also use base64
               getImageUrl: (image) {
-                String link = 'https://avatars.githubusercontent.com/u/24323581?v=4';
                 String base64 = base64Encode(image.readAsBytesSync());
                 String base64String = 'data:image/png;base64, $base64';
                 return base64String;

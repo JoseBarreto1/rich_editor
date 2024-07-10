@@ -79,7 +79,7 @@ class RichEditorState extends State<RichEditor> {
     final filePath = assetPath;
     _controller?.loadUrl(
       urlRequest: URLRequest(
-        url: Uri.tryParse('http://localhost:$port/$filePath'),
+        url: WebUri('http://localhost:$port/$filePath'),
       ),
     );
   }
@@ -95,10 +95,8 @@ class RichEditorState extends State<RichEditor> {
         Expanded(
           child: InAppWebView(
             key: _mapKey,
-            initialOptions: InAppWebViewGroupOptions(
-              crossPlatform: InAppWebViewOptions(
-                supportZoom: false,
-              )
+            initialSettings: InAppWebViewSettings(
+              supportZoom: false,
             ),
             onWebViewCreated: (controller) async {
               _controller = controller;
@@ -108,7 +106,7 @@ class RichEditorState extends State<RichEditor> {
               } else {
                 await _controller!.loadUrl(
                   urlRequest: URLRequest(
-                    url: Uri.tryParse(
+                    url: WebUri(
                         'file:///android_asset/flutter_assets/$assetPath'),
                   ),
                 );
@@ -126,8 +124,8 @@ class RichEditorState extends State<RichEditor> {
             gestureRecognizers: [
               Factory(() => VerticalDragGestureRecognizer()..onUpdate = (_) {}),
             ].toSet(),
-            onLoadError: (controller, url, code, e) {
-              print("error $e $code");
+            onReceivedHttpError: (controller, url, e) {
+              print("error $e ${e.statusCode}");
             },
             onConsoleMessage: (controller, consoleMessage) async {
               print(
@@ -157,15 +155,19 @@ class RichEditorState extends State<RichEditor> {
     if (widget.value != null) await javascriptExecutor.setHtml(widget.value!);
     if (widget.editorOptions?.padding != null)
       await javascriptExecutor.setPadding(widget.editorOptions!.padding!);
-    if (widget.editorOptions?.backgroundColor != null){
-      await javascriptExecutor.setBackgroundColor(widget.editorOptions!.backgroundColor!);
-    }      
+    if (widget.editorOptions?.backgroundColor != null) {
+      await javascriptExecutor
+          .setBackgroundColor(widget.editorOptions!.backgroundColor!);
+    }
     if (widget.editorOptions?.baseTextColor != null)
-      await javascriptExecutor.setBaseTextColor(widget.editorOptions!.baseTextColor!);
+      await javascriptExecutor
+          .setBaseTextColor(widget.editorOptions!.baseTextColor!);
     if (widget.editorOptions?.placeholder != null)
-      await javascriptExecutor.setPlaceholder(widget.editorOptions!.placeholder!);
+      await javascriptExecutor
+          .setPlaceholder(widget.editorOptions!.placeholder!);
     if (widget.editorOptions?.baseFontFamily != null)
-      await javascriptExecutor.setBaseFontFamily(widget.editorOptions!.baseFontFamily!);
+      await javascriptExecutor
+          .setBaseFontFamily(widget.editorOptions!.baseFontFamily!);
   }
 
   _addJSListener() async {
@@ -179,7 +181,7 @@ class RichEditorState extends State<RichEditor> {
   /// Get current HTML from editor
   Future<String?> getHtml() async {
     try {
-      if(_controller != null) {
+      if (_controller != null) {
         htmlLocal = await javascriptExecutor.getCurrentHtml();
       }
     } catch (e) {}
@@ -188,14 +190,14 @@ class RichEditorState extends State<RichEditor> {
 
   /// Set your HTML to the editor
   setHtml(String html) async {
-    if(_controller != null) {
+    if (_controller != null) {
       return await javascriptExecutor.setHtml(html);
     }
-    htmlLocal = html;    
+    htmlLocal = html;
   }
 
   /// Get current Controller
-  InAppWebViewController? getController(){
+  InAppWebViewController? getController() {
     return _controller;
   }
 

@@ -192,7 +192,6 @@ class EditorToolBar extends StatelessWidget {
                     }
                   },
                 ),
-                // TODO: Show font button on iOS
                 Visibility(
                   visible: (!kIsWeb && Platform.isAndroid),
                   child: TabButton(
@@ -325,15 +324,6 @@ class EditorToolBar extends StatelessWidget {
                       await javascriptExecutor.insertCheckbox(text);
                   },
                 ),
-
-                /// TODO: Implement Search feature
-                // TabButton(
-                //   tooltip: 'Search',
-                //   icon: Icons.search,
-                //   onTap: () async {
-                //     // await javascriptExecutor.insertNumberedList();
-                //   },
-                // ),
               ],
             ),
           ),
