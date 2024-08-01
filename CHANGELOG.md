@@ -1,3 +1,6 @@
+## 1.1.1
+- Expose flutter_inappwebview.dart to be used in the project
+
 ## 1.1.0
 
 * Migrate project for Flutter 3.22 and Android 14 (API level 34)
