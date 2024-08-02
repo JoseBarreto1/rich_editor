@@ -24,9 +24,9 @@ dev_dependencies:
 dependency_overrides:
   flutter_inappwebview_android:
     git:
-      url: https://github.com/EArminjon/flutter_inappwebview.git
+      url: https://github.com/euferreira/flutter_inappwebview.git
       path: flutter_inappwebview_android
-      ref: 4b781b6
+      ref: bdcf829
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
