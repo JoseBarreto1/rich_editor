@@ -122,9 +122,9 @@ packages:
     dependency: "direct overridden"
     description:
       path: flutter_inappwebview_android
-      ref: d89b1d32638b49dfc58c4b7c84153be0c269d057
-      resolved-ref: d89b1d32638b49dfc58c4b7c84153be0c269d057
-      url: "https://github.com/holzgeist/flutter_inappwebview"
+      ref: "4b781b6"
+      resolved-ref: "4b781b65a293d223d432342eb8c643df8612bbbd"
+      url: "https://github.com/EArminjon/flutter_inappwebview.git"
     source: git
     version: "1.0.13"
   flutter_inappwebview_internal_annotations:
