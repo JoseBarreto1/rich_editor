@@ -1,3 +1,6 @@
+## 1.1.3
+- update references to flutter_inappwebview
+
 ## 1.1.2
 - Fix dependencies flutter_inappwebview.dart
 
