@@ -1,3 +1,6 @@
+## 1.1.2
+- Fix dependencies flutter_inappwebview.dart
+
 ## 1.1.1
 - Expose flutter_inappwebview.dart to be used in the project
 
