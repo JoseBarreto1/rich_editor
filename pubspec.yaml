@@ -1,6 +1,6 @@
 name: rich_editor_gg
 description: Flutter with a rich set of supported formatting options.
-version: 1.1.4
+version: 1.1.5
 homepage: https://github.com/JoseBarreto1/rich_editor
 
 environment:
@@ -9,7 +9,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_inappwebview: ^6.0.0
+  #flutter_inappwebview: ^6.0.0
+  flutter_inappwebview:
+    git:
+      url: https://github.com/euferreira/flutter_inappwebview.git
+      path: flutter_inappwebview
+      ref: e4a267b
   mime: ^1.0.5
   image_picker: ^1.1.2
   flutter_widget_from_html_core: ^0.15.1
@@ -21,12 +26,9 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-dependency_overrides:
-  flutter_inappwebview_android:
-    git:
-      url: https://github.com/euferreira/flutter_inappwebview.git
-      path: flutter_inappwebview_android
-      ref: bdcf829
+# dependency_overrides:
+#   flutter_inappwebview:
+#     path: ../flutter_inappwebview/flutter_inappwebview
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
