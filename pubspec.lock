@@ -110,24 +110,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.0"
-  flutter_inappwebview:
-    dependency: "direct main"
-    description:
-      path: flutter_inappwebview
-      ref: e4a267b
-      resolved-ref: e4a267be1cd7b27d1fccff6e1519b1a3a3800004
-      url: "https://github.com/euferreira/flutter_inappwebview.git"
-    source: git
-    version: "6.0.0"
-  flutter_inappwebview_android:
-    dependency: transitive
-    description:
-      path: flutter_inappwebview_android
-      ref: e4a267b
-      resolved-ref: e4a267be1cd7b27d1fccff6e1519b1a3a3800004
-      url: "https://github.com/euferreira/flutter_inappwebview.git"
-    source: git
-    version: "1.0.14"
   flutter_inappwebview_internal_annotations:
     dependency: transitive
     description:
@@ -139,39 +121,35 @@ packages:
   flutter_inappwebview_ios:
     dependency: transitive
     description:
-      path: flutter_inappwebview_ios
-      ref: e4a267b
-      resolved-ref: e4a267be1cd7b27d1fccff6e1519b1a3a3800004
-      url: "https://github.com/euferreira/flutter_inappwebview.git"
-    source: git
+      name: flutter_inappwebview_ios
+      sha256: f363577208b97b10b319cd0c428555cd8493e88b468019a8c5635a0e4312bd0f
+      url: "https://pub.dev"
+    source: hosted
     version: "1.0.13"
   flutter_inappwebview_macos:
     dependency: transitive
     description:
-      path: flutter_inappwebview_macos
-      ref: e4a267b
-      resolved-ref: e4a267be1cd7b27d1fccff6e1519b1a3a3800004
-      url: "https://github.com/euferreira/flutter_inappwebview.git"
-    source: git
+      name: flutter_inappwebview_macos
+      sha256: b55b9e506c549ce88e26580351d2c71d54f4825901666bd6cfa4be9415bb2636
+      url: "https://pub.dev"
+    source: hosted
     version: "1.0.11"
   flutter_inappwebview_platform_interface:
     dependency: transitive
     description:
-      path: flutter_inappwebview_platform_interface
-      ref: e4a267b
-      resolved-ref: e4a267be1cd7b27d1fccff6e1519b1a3a3800004
-      url: "https://github.com/euferreira/flutter_inappwebview.git"
-    source: git
-    version: "1.0.12"
+      name: flutter_inappwebview_platform_interface
+      sha256: "545fd4c25a07d2775f7d5af05a979b2cac4fbf79393b0a7f5d33ba39ba4f6187"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.10"
   flutter_inappwebview_web:
     dependency: transitive
     description:
-      path: flutter_inappwebview_web
-      ref: e4a267b
-      resolved-ref: e4a267be1cd7b27d1fccff6e1519b1a3a3800004
-      url: "https://github.com/euferreira/flutter_inappwebview.git"
-    source: git
-    version: "1.0.9"
+      name: flutter_inappwebview_web
+      sha256: d8c680abfb6fec71609a700199635d38a744df0febd5544c5a020bd73de8ee07
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.8"
   flutter_plugin_android_lifecycle:
     dependency: transitive
     description:
@@ -467,6 +445,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.5.1"
+  webview_inapp:
+    dependency: "direct main"
+    description:
+      name: webview_inapp
+      sha256: "3a3fbd225f23a45732bcf2e17bea4d503f6fce06fd72c8185e53db5248710af8"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
+  webview_inapp_android:
+    dependency: transitive
+    description:
+      name: webview_inapp_android
+      sha256: "5fd579df121fa3de8072f992b58d8b6b15d56d8768c589eba65328ac7d492a76"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.2"
+  webview_inapp_platform_interface:
+    dependency: transitive
+    description:
+      name: webview_inapp_platform_interface
+      sha256: "7d7ab84079294ab25671a0f2792a3d917372aaea44705e7e27d6515cc0a80af1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
   xml:
     dependency: transitive
     description:

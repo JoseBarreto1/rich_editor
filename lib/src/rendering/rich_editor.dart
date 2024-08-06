@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:webview_inapp/flutter_inappwebview.dart';
 import 'package:rich_editor_gg/src/models/enum/bar_position.dart';
 import 'package:rich_editor_gg/src/models/rich_editor_options.dart';
 import 'package:rich_editor_gg/src/services/local_server.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:webview_inapp/flutter_inappwebview.dart';
 import 'package:rich_editor_gg/src/extensions/extensions.dart';
 import 'package:rich_editor_gg/src/models/callbacks/did_html_change_listener.dart';
 import 'package:rich_editor_gg/src/models/callbacks/html_changed_listener.dart';

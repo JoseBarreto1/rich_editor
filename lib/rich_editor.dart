@@ -1,6 +1,6 @@
 library rich_editor;
 
-export 'package:flutter_inappwebview/flutter_inappwebview.dart';
+export 'package:webview_inapp/flutter_inappwebview.dart';
 
 export 'src/models/enum/bar_position.dart';
 export 'src/models/rich_editor_options.dart';

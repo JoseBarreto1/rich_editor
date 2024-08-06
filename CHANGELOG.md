@@ -1,4 +1,6 @@
-## 1.1.4
+## 1.1.6
+- Remove a biblioteca flutter_inappwebview e atualiza as dependências do rich_editor.
+
 ## 1.1.3
 - update references to flutter_inappwebview
 
