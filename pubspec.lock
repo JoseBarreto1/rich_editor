@@ -449,18 +449,18 @@ packages:
     dependency: "direct main"
     description:
       name: webview_inapp
-      sha256: "3a3fbd225f23a45732bcf2e17bea4d503f6fce06fd72c8185e53db5248710af8"
+      sha256: "58a82ec8cfc77d310483a090c7c8600ee8ba897af7ebe5655618618b63dc55c1"
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.1"
+    version: "1.0.2"
   webview_inapp_android:
     dependency: transitive
     description:
       name: webview_inapp_android
-      sha256: "5fd579df121fa3de8072f992b58d8b6b15d56d8768c589eba65328ac7d492a76"
+      sha256: b0ee41e36a59ad734ff2370188d9293fad661b987ea7c03ebc83761cad7aa0ad
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.2"
+    version: "1.0.3"
   webview_inapp_platform_interface:
     dependency: transitive
     description:
