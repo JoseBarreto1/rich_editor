@@ -1,3 +1,6 @@
+## 1.1.10
+- Remove replace html (/\+/g, '%20').
+
 ## 1.1.9
 - Library Update webview_inapp v1.0.4
 

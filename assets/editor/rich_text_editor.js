@@ -235,7 +235,7 @@ var editor = {
     },
 
     _decodeHtml: function(html) {
-        return decodeURIComponent(html.replace(/\+/g, '%20'));
+        return decodeURIComponent(html);
     },
 
     _setBaseUrl: function(baseUrl) {
