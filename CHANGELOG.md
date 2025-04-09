@@ -1,3 +1,8 @@
+## 1.2.0
+- Migrate project for Flutter 3.29 and Android 15 (API level 35).
+- Adiciona novamente a biblioteca flutter_inappwebview e atualiza as dependências do rich_editor.
+- upgrade kotlin.
+
 ## 1.1.10
 - Remove replace html (/\+/g, '%20').
 

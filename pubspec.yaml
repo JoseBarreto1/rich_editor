@@ -1,6 +1,6 @@
 name: rich_editor_gg
 description: Flutter with a rich set of supported formatting options.
-version: 1.1.10
+version: 1.2.0
 homepage: https://github.com/JoseBarreto1/rich_editor
 
 environment:
@@ -9,13 +9,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  webview_inapp: ^1.0.4
-  mime: ^1.0.5
+  flutter_inappwebview: ^6.1.5
+  mime: ^2.0.0
   image_picker: ^1.1.2
-  flutter_widget_from_html_core: ^0.15.1
+  flutter_widget_from_html_core: ^0.16.0
   flutter_colorpicker: ^1.1.0
-  path: ^1.9.0
-  xml2json: ^6.2.3
+  path: ^1.9.1
+  xml2json: ^6.2.7
 
 dev_dependencies:
   flutter_test:
